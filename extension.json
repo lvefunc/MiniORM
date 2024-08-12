@@ -1,0 +1,28 @@
+{
+  "name": "MiniORM",
+  "author": [
+    "lvefunc"
+  ],
+  "url": "",
+  "description": "",
+  "license-name": "GPL-2.0-or-later",
+  "type": "other",
+  "requires": {
+    "MediaWiki": ">= 1.35.0"
+  },
+  "AutoloadNamespaces": {
+    "MiniORM\\": "includes/"
+  },
+  "Hooks": {
+    "RegisterAnnotations": [
+      "MiniORM\\Hooks::registerAnnotations"
+    ],
+    "RegisterTransformStrategies": [
+      "MiniORM\\Hooks::registerTransformStrategies"
+    ],
+    "LoadExtensionSchemaUpdates": [
+      "MiniORM\\Hooks::onLoadExtensionSchemaUpdates"
+    ]
+  },
+  "manifest_version": 2
+}
